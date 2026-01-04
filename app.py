@@ -5,12 +5,13 @@ import google.generativeai as genai
 from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderTimedOut, GeocoderServiceError
 
+
 # API Key Integration
 # User needs to create a .streamlit/secrets.toml file with GEMINI_API_KEY = "YOUR_API_KEY"
 try:
     genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 except KeyError:
-    st.error("Gemini API Key not found. Please set it in .streamlit/secrets.toml")
+    st.error("Gemini API Key not found. Please set it in .streamlit/secrets.toml") # while hosting you need to set the API key in streamlit hosting interface
     st.stop()
 
 
