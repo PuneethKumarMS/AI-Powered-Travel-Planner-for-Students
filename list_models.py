@@ -2,7 +2,7 @@ import google.generativeai as genai
 import streamlit as st
 
 try:
-    genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
+    genai.configure(api_key=st.secrets["GEMINI_API_KEY"]) # Any API key 
 except KeyError:
     print("Gemini API Key not found. Please set it in .streamlit/secrets.toml")
     exit()
