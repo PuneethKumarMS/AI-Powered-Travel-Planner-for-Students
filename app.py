@@ -2,7 +2,8 @@ import streamlit as st
 import folium
 from streamlit_folium import st_folium
 import google.generativeai as genai
-from geopy.geocoders import Nominatim
+# geopy library: Geocoding and reverse coding, distance calculations.
+from geopy.geocoders import Nominatim 
 from geopy.exc import GeocoderTimedOut, GeocoderServiceError
 
 
