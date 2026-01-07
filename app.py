@@ -2,10 +2,10 @@ import streamlit as st
 import folium
 from streamlit_folium import st_folium
 import google.generativeai as genai
+
 # geopy library: Geocoding and reverse coding, distance calculations.
 from geopy.geocoders import Nominatim 
 from geopy.exc import GeocoderTimedOut, GeocoderServiceError
-
 
 # API Key Integration
 # User needs to create a .streamlit/secrets.toml file with GEMINI_API_KEY = "YOUR_API_KEY"
@@ -15,10 +15,8 @@ except KeyError:
     st.error("Gemini API Key not found. Please set it in .streamlit/secrets.toml") # while hosting you need to set the API key in streamlit hosting interface
     st.stop()
 
-
 def generate_itinerary(starting_location, destination, budget_min, budget_max, currency, start_date, end_date, interests):
     prompt = f"Create a personalized, budget-friendly travel itinerary for a student trip from {starting_location} to {destination} from {start_date} to {end_date}. The budget is between {budget_min} and {budget_max} {currency}. The student is interested in {', '.join(interests)}. Include cost-effective transportation, affordable accommodation, and student-friendly activities. The itinerary should be structured with daily plans, estimated costs for each activity/transportation/accommodation, and time allocations. Please present the output in a clear, visually appealing markdown format with headings for each day and bullet points for activities."
-    
     model = genai.GenerativeModel('gemini-pro-latest')
     try:
         response = model.generate_content(prompt)
@@ -74,8 +72,7 @@ def main():
                     itinerary = generate_itinerary(starting_location, destination, budget_min, budget_max, currency, start_date, end_date, interests)
                     st.session_state.itinerary = itinerary
 
-
-
+        
         # Display a map
         st.subheader("Explore on Map")
         
