@@ -1,4 +1,4 @@
-import google.generativeai as genai
+import google.generativeai as genai # any platform import like openAI etc..
 import streamlit as st
 
 try:
