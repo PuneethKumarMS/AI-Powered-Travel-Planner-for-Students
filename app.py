@@ -1,5 +1,5 @@
 import streamlit as st
-import folium
+import folium # PYTHON LIBRARY USED FOR INTERACTIVE MAP AND VISUALIZING GEOSPATIAL DATA 
 from streamlit_folium import st_folium
 import google.generativeai as genai
 
