@@ -24,24 +24,20 @@ def generate_itinerary(starting_location, destination, budget_min, budget_max, c
     except Exception as e:
         st.error(f"Error generating itinerary: {e}")
         return "Error: Could not generate itinerary."
-
 st.set_page_config(page_title="AI-Powered Travel Planner", layout="wide")
 
 def main():
     tab1, tab2 = st.tabs(["Plan Your Trip", "About"])
-
     with tab1:
         st.title("AI-Powered Travel Planner for Students")
 
         # Initialize session state for itinerary
         if 'itinerary' not in st.session_state:
             st.session_state.itinerary = None
-
         st.sidebar.header("Plan Your Trip")
 
         # Starting Location Input
         starting_location = st.sidebar.text_input("Starting Location", "", placeholder="Enter starting location")
-
         # Destination Input
         destination = st.sidebar.text_input("Destination", "", placeholder="Enter destination location")
 
