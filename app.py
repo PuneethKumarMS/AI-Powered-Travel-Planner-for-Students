@@ -71,7 +71,6 @@ def main():
         
         # Display a map
         st.subheader("Explore on Map")
-        
         geolocator = Nominatim(user_agent="travel_planner_app")
 
         @st.cache_data(ttl=3600) # Cache for 1 hour
@@ -108,7 +107,6 @@ def main():
                 map_center = [starting_loc_coords.latitude, starting_loc_coords.longitude]
             else:
                 map_center = [0, 0] # Default center if neither is found
-
             m = folium.Map(location=map_center, zoom_start=10)
 
             if starting_loc_coords:
@@ -126,7 +124,6 @@ def main():
             if starting_loc_coords and destination_loc_coords:
                 m.fit_bounds([[starting_loc_coords.latitude, starting_loc_coords.longitude],
                               [destination_loc_coords.latitude, destination_loc_coords.longitude]])
-
             st_folium(m, width=700, height=500)
 
             # Move itinerary display inside the map block
@@ -139,7 +136,6 @@ def main():
         st.header("About This App")
         st.write("This AI-powered travel planner helps students create personalized and budget-friendly itineraries.")
         st.write("Developed with Streamlit and Google Gemini.")
-
         st.subheader("Developer Bio")
         st.write("Passionate Computer Science student with a strong interest in building scalable, AI-driven solutions. Strong teamcollaborator with proven performance in hackathons and technical events. Interested in applying technical skills,creativity, and continuous learning to impactful projects.")
     
@@ -150,7 +146,6 @@ def main():
                 file_name="resume.pdf",
                 mime="application/octet-stream"
             )
-        
         st.write("Social Link:")
         st.markdown("**LinkedIN Profle link:** https://www.linkedin.com/in/puneethkumarms")
         st.markdown("**Github Profile link:** https://github.com/PuneethKumarMS")
@@ -158,7 +153,5 @@ def main():
         st.subheader("Contact Information")
         st.markdown("**Email:** [puneethkumarms21@gmail.com](mailto:puneethkumarms21@gmail.com)")
         
-
-       
 if __name__ == "__main__":
     main()
