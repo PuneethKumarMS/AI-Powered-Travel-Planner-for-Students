@@ -137,15 +137,10 @@ def main():
         st.write("This AI-powered travel planner helps students create personalized and budget-friendly itineraries.")
         st.write("Developed with Streamlit and Google Gemini.")
         st.subheader("Developer Bio")
-        st.write("Passionate Computer Science student with a strong interest in building scalable, AI-driven solutions. Strong teamcollaborator with proven performance in hackathons and technical events. Interested in applying technical skills,creativity, and continuous learning to impactful projects.")
+        st.write("Passionate Computer Science student with a strong interest in building scalable, AI-driven solutions. Strong team collaborator with proven performance in hackathons and technical events. Interested in applying technical skills,creativity, and continuous learning to impactful projects.")
     
-        with open("documents/resume.pdf", "rb") as file:
-            btn = st.download_button(
-                label="Download Resume",
-                data=file,
-                file_name="resume.pdf",
-                mime="application/octet-stream"
-            )
+        #removed resume section here
+        
         st.write("Social Link:")
         st.markdown("**LinkedIN Profle link:** https://www.linkedin.com/in/puneethkumarms")
         st.markdown("**Github Profile link:** https://github.com/PuneethKumarMS")
