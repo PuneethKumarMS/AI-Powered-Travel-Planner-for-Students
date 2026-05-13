@@ -42,7 +42,7 @@ def main():
         destination = st.sidebar.text_input("Destination", "", placeholder="Enter destination location")
 
         # Custom Budget Input
-        budget_min = st.sidebar.text_input("Minimum Budget", value="500")
+        budget_min = st.sidebar.text_input("Minimum Budget", value="550")
         budget_max = st.sidebar.text_input("Maximum Budget", value="2000")
         currency = st.sidebar.text_input("Currency", value="USD")
 
