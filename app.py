@@ -133,7 +133,7 @@ def main():
             st.info("Enter a starting location or destination to see the map.")
 
     with tab2:
-        st.header("About This App")
+        st.header("About")
         st.write("This AI-powered travel planner helps students create personalized and budget-friendly itineraries.")
         st.write("Developed with Streamlit and Google Gemini.")
         st.subheader("Developer Bio")
