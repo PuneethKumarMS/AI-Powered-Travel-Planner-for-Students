@@ -1,7 +1,9 @@
 import streamlit as st
 import folium # PYTHON LIBRARY USED FOR INTERACTIVE MAP AND VISUALIZING GEOSPATIAL DATA 
 from streamlit_folium import st_folium
-import google.generativeai as genai
+#import google.generativeai as genai  ---> this was old package currently unavailable and it is depricated
+
+from google import genai
 
 # geopy library: Geocoding and reverse coding, distance calculations.
 from geopy.geocoders import Nominatim 
@@ -39,12 +41,12 @@ def main():
         # Starting Location Input
         starting_location = st.sidebar.text_input("Starting Location", "", placeholder="Enter starting location")
         # Destination Input
-        destination = st.sidebar.text_input("Destination", "", placeholder="Enter destination location")
+        destination = st.sidebar.text_input("Destination", "", placeholder="Enter destination")
 
         # Custom Budget Input
-        budget_min = st.sidebar.text_input("Minimum Budget", value="550")
-        budget_max = st.sidebar.text_input("Maximum Budget", value="2000")
-        currency = st.sidebar.text_input("Currency", value="USD")
+        budget_min = st.sidebar.text_input("Minimum Budget", value="1000")
+        budget_max = st.sidebar.text_input("Maximum Budget", value="10000")
+        currency = st.sidebar.text_input("Currency", value="INR")
 
         # Travel Date Pickers
         col1, col2 = st.sidebar.columns(2)
@@ -137,7 +139,7 @@ def main():
         st.write("This AI-powered travel planner helps students create personalized and budget-friendly itineraries.")
         st.write("Developed with Streamlit and Google Gemini.")
         st.subheader("Developer Bio")
-        st.write("Passionate Computer Science student with a strong interest in building scalable, AI-driven solutions. Strong team collaborator with proven performance in hackathons and technical events. Interested in applying technical skills,creativity, and continuous learning to impactful projects.")
+        st.write("Passionate Computer Science Graduate with a strong interest in building scalable, AI-driven solutions. Strong team collaborator with proven performance in hackathons and technical events. Interested in applying technical skills,creativity, and continuous learning to impactful projects.")
     
         #removed resume section here
         
