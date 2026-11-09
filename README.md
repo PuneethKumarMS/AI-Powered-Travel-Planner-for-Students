@@ -56,3 +56,5 @@ This project is an AI-powered travel planner designed to help students create pe
 1. Enter your starting location, destination, budget range, travel dates, and interests in the sidebar.
 2. Click the "Generate Itinerary" button.
 3. The application will display a map with your starting and destination points, followed by a personalized travel itinerary.
+
+## Future Enhancement
